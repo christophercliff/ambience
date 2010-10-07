@@ -29,3 +29,10 @@ The JavaScript:
     $('.myambience')
         .ambience()
         ;
+
+
+Thanks to
+----------------
+
+- http://plugins.jquery.com/project/color
+- http://dev.opera.com/articles/view/framerate-control-system-for-javascript/ 

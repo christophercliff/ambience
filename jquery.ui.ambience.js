@@ -1,42 +1,42 @@
-function Framerate()
-{
-    return this;
-};
-
-Framerate.prototype.setRate = function (rate)
-{
-    this.frameLen = 1000 / rate;
-};
-
-Framerate.prototype.getFrames = function ()
-{
-    var d = new Date(),
-        currTime = d.getTime();
-    
-    delete d;
-    
-    var totalFrames = 0;
-    
-    while (this.prevTime + this.frameLen <= currTime)
-    {
-        this.prevTime += this.frameLen;
-        
-        totalFrames++;
-    }
-    
-    return totalFrames;
-};
-
-Framerate.prototype.reset = function()
-{
-    var d = new Date();
-    
-    this.prevTime = d.getTime();
-    
-    delete d;
-};
-
 (function($){
+    
+    function Framerate()
+    {
+        return this;
+    };
+    
+    Framerate.prototype.setRate = function (rate)
+    {
+        this.frameLen = 1000 / rate;
+    };
+    
+    Framerate.prototype.getFrames = function ()
+    {
+        var d = new Date(),
+            currTime = d.getTime();
+        
+        delete d;
+        
+        var totalFrames = 0;
+        
+        while (this.prevTime + this.frameLen <= currTime)
+        {
+            this.prevTime += this.frameLen;
+            
+            totalFrames++;
+        }
+        
+        return totalFrames;
+    };
+    
+    Framerate.prototype.reset = function()
+    {
+        var d = new Date();
+        
+        this.prevTime = d.getTime();
+        
+        delete d;
+    };
     
     $.widget('ui.ambience', {
         
@@ -193,7 +193,7 @@ Framerate.prototype.reset = function()
         
         _getRandomColor: function (colors) {
             return colors[Math.floor(Math.random()*colors.length)];
-        },
+        }
         
     });
     
