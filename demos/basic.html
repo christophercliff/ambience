@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    
+    <title>Ambience - Basic</title>
+    
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.1/build/reset/reset-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.1/build/reset-fonts/reset-fonts.css">
+    
+    <style type="text/css">
+        
+        .myambience {
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100%; overflow: hidden;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <div class="myambience"></div>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../jquery.ui.ambience.js"></script>
+    
+    <script type="text/javascript">
+        
+        $(function(){
+            
+            $('.myambience')
+                .ambience()
+                ;
+            
+        });
+        
+    </script>
+    
+</body>
+</html>
